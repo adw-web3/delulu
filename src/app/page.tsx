@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
-import FeaturedProducts from "@/components/FeaturedProducts";
+import SectionHeading from "@/components/SectionHeading";
+import ProductShowcase from "@/components/ProductShowcase";
+import SocialLinks from "@/components/SocialLinks";
+import { products } from "@/data/products";
 
 export default function Home() {
   return (
@@ -10,27 +13,50 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
-              O Delulu Ceramics
-            </h2>
-            <div className="mt-4 mx-auto w-16 h-0.5 bg-accent" />
-            <p className="mt-6 text-lg text-warm-gray leading-relaxed">
-              Każde naczynie, które tworzymy, jest unikalne. Powstaje w małym
-              warsztacie, z naturalnych materiałów i z pasją do rzemiosła.
-              Wierzymy, że piękne przedmioty codziennego użytku sprawiają, że
-              życie staje się przyjemniejsze.
+            <p className="text-lg sm:text-xl text-warm-gray leading-relaxed">
+              Każde naczynie jest unikalne — formowane ręcznie, szkliwione
+              z dbałością o detal i wypalane w wysokiej temperaturze. Nie
+              produkujemy seriami. Tworzymy na zamówienie.
             </p>
             <Link
               href="/o-nas"
-              className="inline-block mt-8 text-accent font-medium hover:text-accent-dark transition-colors"
+              className="inline-block mt-6 text-accent font-medium hover:text-accent-dark transition-colors"
             >
-              Poznaj naszą historię &rarr;
+              Poznaj historię Ali &rarr;
             </Link>
           </div>
         </div>
       </section>
 
-      <FeaturedProducts />
+      <section id="kolekcja" className="scroll-mt-20 pb-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading>Kolekcja</SectionHeading>
+
+          <div className="space-y-24 lg:space-y-32">
+            {products.map((product, i) => (
+              <ProductShowcase
+                key={product.id}
+                product={product}
+                reverse={i % 2 !== 0}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface py-20">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
+            Zainteresowany?
+          </h2>
+          <p className="mt-4 text-warm-gray text-lg">
+            Napisz do nas — chętnie stworzymy coś wyjątkowego specjalnie dla Ciebie.
+          </p>
+          <div className="mt-8">
+            <SocialLinks variant="contact" />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

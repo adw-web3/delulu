@@ -1,26 +1,42 @@
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative bg-surface">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal leading-tight">
-            Ceramika tworzona
-            <span className="text-accent"> z duszą</span>
-          </h1>
-          <p className="mt-6 text-lg sm:text-xl text-warm-gray leading-relaxed">
-            Ręcznie toczone kubki, miski i patery. Każde naczynie jest unikalne
-            — stworzone z miłością do rzemiosła i detalu.
-          </p>
-          <Link
-            href="/produkty"
-            className="inline-block mt-8 px-8 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent-dark transition-colors"
-          >
-            Zobacz kolekcję
-          </Link>
-        </div>
+    <section className="relative h-svh flex items-end bg-surface-light">
+      <Image
+        src="/images/zdjecie-ali.png"
+        alt="Ali prezentująca swoją ceramikę"
+        fill
+        className="object-cover"
+        priority
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0B3652]/90 via-[#0B3652]/30 to-transparent" />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 w-full">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white tracking-tight">
+          Delulu Ceramics
+        </h1>
+        <p className="mt-4 text-lg sm:text-xl text-white/70 max-w-lg">
+          Unikalna ceramika tworzona ręcznie. Każde naczynie to osobna historia.
+        </p>
       </div>
+
+      <a
+        href="#kolekcja"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-white/50 hover:text-white transition-colors"
+        aria-label="Przewiń do kolekcji"
+      >
+        <svg
+          className="w-6 h-6 animate-bounce"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
     </section>
   );
 }

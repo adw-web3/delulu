@@ -42,7 +42,7 @@ export default function ONasPage() {
           <div className="grid sm:grid-cols-3 gap-8 text-center">
             <div>
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-surface-light flex items-center justify-center">
-                <span className="text-2xl text-accent font-heading font-bold">1</span>
+                <span className="text-2xl text-accent font-bold">1</span>
               </div>
               <h4 className="font-semibold text-charcoal">Formowanie</h4>
               <p className="mt-2 text-sm text-warm-gray">
@@ -51,7 +51,7 @@ export default function ONasPage() {
             </div>
             <div>
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-surface-light flex items-center justify-center">
-                <span className="text-2xl text-accent font-heading font-bold">2</span>
+                <span className="text-2xl text-accent font-bold">2</span>
               </div>
               <h4 className="font-semibold text-charcoal">Szkliwienie</h4>
               <p className="mt-2 text-sm text-warm-gray">
@@ -60,7 +60,7 @@ export default function ONasPage() {
             </div>
             <div>
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-surface-light flex items-center justify-center">
-                <span className="text-2xl text-accent font-heading font-bold">3</span>
+                <span className="text-2xl text-accent font-bold">3</span>
               </div>
               <h4 className="font-semibold text-charcoal">Wypalanie</h4>
               <p className="mt-2 text-sm text-warm-gray">

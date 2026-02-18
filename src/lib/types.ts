@@ -1,14 +1,13 @@
-export type ProductCategory = "kubki" | "miski" | "patery";
+export interface ProductImage {
+  src: string;
+  alt: string;
+}
 
 export interface Product {
   id: string;
   name: string;
   description: string;
-  category: ProductCategory;
-  imageSrc: string;
-  imageAlt: string;
-  price?: string;
-  featured?: boolean;
+  images: ProductImage[];
 }
 
 export interface NavLink {

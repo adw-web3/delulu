@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond } from "next/font/google";
+import localFont from "next/font/local";
+import { Lora } from "next/font/google";
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const tanPearl = localFont({
+  src: "../fonts/tan-pearl.otf",
+  variable: "--font-tan-pearl",
+  display: "swap",
+});
+
+const lora = Lora({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-cormorant-garamond",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-lora",
   display: "swap",
 });
 
@@ -35,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={`${cormorant.variable} antialiased`}>
+      <body className={`${tanPearl.variable} ${lora.variable} antialiased`}>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
