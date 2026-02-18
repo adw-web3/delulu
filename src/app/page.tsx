@@ -22,7 +22,7 @@ export default function Home() {
               href="/o-nas"
               className="inline-block mt-6 text-accent font-medium hover:text-accent-dark transition-colors"
             >
-              Poznaj historię Ali &rarr;
+              Poznaj historię Alicji &rarr;
             </Link>
           </div>
         </div>

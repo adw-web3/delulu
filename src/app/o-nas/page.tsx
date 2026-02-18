@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
@@ -15,22 +16,35 @@ export default function ONasPage() {
 
       <div className="max-w-3xl mx-auto space-y-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="aspect-[4/5] rounded-2xl bg-surface-light flex items-center justify-center text-warm-gray">
-            <span className="text-sm">Zdjęcie Ali</span>
+          <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-surface-light">
+            <Image
+              src="/images/zdjecie-ali.png"
+              alt="Alicja prezentująca swoją ceramikę"
+              width={600}
+              height={750}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-charcoal">
-              Cześć, jestem Ali
+              Od vana do pracowni ceramicznej...
             </h3>
             <p className="text-warm-gray leading-relaxed">
-              Ceramika jest moją pasją od lat. Każde naczynie, które tworzę,
-              jest unikalne — formowane ręcznie na kole garncarskim, szkliwione
-              z dbałością o każdy detal i wypalane w wysokiej temperaturze.
+              Moja ceramika narodziła się w drodze. Większość projektów, które tu
+              widzisz, ma swoje korzenie w podróży vanem przez słoneczną Hiszpanię.
+              To tam, między jednym a drugim postojem, chłonęłam kolory, smaki
+              i zapachy, które dziś zamykam w glinie.
             </p>
             <p className="text-warm-gray leading-relaxed">
-              Wierzę, że piękne przedmioty codziennego użytku mogą odmienić
-              nawet najprostsze chwile — poranną kawę, wspólny obiad czy
-              wieczorne herbatę.
+              Inspiruje mnie wszystko, co kojarzy się z wolnością: głęboki błękit
+              morza, smak wspólnego jedzenia i fascynujące podwodne żyjątka. Dlatego
+              moje prace nie są idealnie proste — mają w sobie energię natury.
+              Przykład? Moja niebieska patera na tapas, która bardziej niż naczynie
+              przypomina podwodną skałę.
+            </p>
+            <p className="text-warm-gray leading-relaxed">
+              Tworzę dla tych, którzy tak jak ja, kochają celebrować chwile i chcą
+              mieć w domu kawałek słońca, niezależnie od pogody za oknem.
             </p>
           </div>
         </div>

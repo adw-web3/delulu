@@ -17,7 +17,7 @@ export default function KontaktPage() {
 
       <div className="max-w-2xl mx-auto">
         <p className="text-center text-warm-gray text-lg mb-10">
-          Skontaktuj się z Ali przez ulubiony kanał. Chętnie odpowiemy na
+          Skontaktuj się z Alicją przez ulubiony kanał. Chętnie odpowiemy na
           pytania, doradzimy i przyjmiemy zamówienie.
         </p>
         <SocialLinks variant="contact" />

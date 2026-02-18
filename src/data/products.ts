@@ -14,4 +14,14 @@ export const products: Product[] = [
       { src: "/images/products/kubek_kraken_5.png", alt: "Kubki Kraken — detale uchwytu" },
     ],
   },
+  {
+    id: "miski-oceaniczne",
+    name: "Miski Oceaniczne",
+    description:
+      "Ręcznie toczone miski inspirowane głębią oceanu. Szkliwione w odcieniach błękitu i turkusu, z organicznymi kształtami przypominającymi morskie skały. Idealne do serwowania tapas, sałatek czy ulubionej zupy.",
+    images: [
+      { src: "/images/products/miski.jpg", alt: "Miski Oceaniczne — zestaw misek w odcieniach błękitu" },
+      { src: "/images/products/miski_2.jpg", alt: "Miski Oceaniczne — detale szkliwienia i faktura" },
+    ],
+  },
 ];

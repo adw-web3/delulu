@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative h-svh flex items-end bg-surface-light">
       <Image
         src="/images/zdjecie-ali.png"
-        alt="Ali prezentująca swoją ceramikę"
+        alt="Alicja prezentująca swoją ceramikę"
         fill
         className="object-cover"
         priority
