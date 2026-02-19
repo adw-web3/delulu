@@ -122,7 +122,7 @@ export default function ProductShowcase({
 
           {/* Thumbnails */}
           {product.images.length > 1 && (
-            <div className="flex gap-3 overflow-x-auto pb-1">
+            <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
               {product.images.map((img, i) => (
                 <button
                   key={i}

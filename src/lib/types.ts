@@ -8,6 +8,8 @@ export interface Product {
   name: string;
   description: string;
   images: ProductImage[];
+  category: "kubki" | "miski" | "naczynia";
+  featured?: boolean;
 }
 
 export interface NavLink {

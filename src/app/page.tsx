@@ -33,13 +33,24 @@ export default function Home() {
           <SectionHeading>Kolekcja</SectionHeading>
 
           <div className="space-y-24 lg:space-y-32">
-            {products.map((product, i) => (
-              <ProductShowcase
-                key={product.id}
-                product={product}
-                reverse={i % 2 !== 0}
-              />
-            ))}
+            {products
+              .filter((p) => p.featured)
+              .map((product, i) => (
+                <ProductShowcase
+                  key={product.id}
+                  product={product}
+                  reverse={i % 2 !== 0}
+                />
+              ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link
+              href="/kolekcja"
+              className="inline-block px-8 py-3 border-2 border-accent text-accent rounded-full font-medium hover:bg-accent hover:text-white transition-colors"
+            >
+              Zobacz całą kolekcję &rarr;
+            </Link>
           </div>
         </div>
       </section>
