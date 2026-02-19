@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section className="relative h-svh flex items-end bg-surface-light">
       <Image
-        src="/images/zdjecie-ali.png"
-        alt="Alicja prezentująca swoją ceramikę"
+        src="/images/products/alicja_home.jpg"
+        alt="Alicja pijąca z kubka Kraken nad morzem"
         fill
         className="object-cover"
         priority
